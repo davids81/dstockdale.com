@@ -1,10 +1,81 @@
 
 
-.content {
-    max-width: 500px;
-    margin: auto
-}
 
 p {
     font-family: "Consolas";
+}
+
+.main-header {
+    grid-area: header;
+}
+
+.main-content {
+    grid-area: maincontent;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.side {
+    grid-area: sidebar;
+}
+
+.ad {
+    grid-area: ad;
+}
+
+.main-footer {
+    grid-area: footer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "maincontent"
+        "sidebar"
+        "ad"
+        "footer";
+}
+
+@media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "sidebar maincontent"
+            "ad footer";
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width: 700px) {
+    .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav maincontent sidebar"
+            "nav maincontent ad"
+            "footer footer footer";
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
 }
