@@ -1,8 +1,16 @@
 
-
+body {
+    background-image: url("../images/back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 p {
     font-family: "Consolas";
+}
+
+a, a:hover, a:active, a:visited {
+     color: white; 
 }
 
 .main-header {
@@ -35,7 +43,7 @@ nav ul {
 }
 
 .wrapper {
-    max-width: 500px;
+    max-width: 1000px;
     margin: auto;
     display: grid;
     grid-gap: 20px;
