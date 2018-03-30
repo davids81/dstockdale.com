@@ -39,6 +39,8 @@ a, a:hover, a:active, a:visited {
 }
 
 nav ul {
+    display: flex;
+    flex-direction: row-reverse;
     list-style-type: none;
     padding: 0px;
 }
