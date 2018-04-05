@@ -40,9 +40,15 @@ a, a:hover, a:active, a:visited {
 
 nav ul {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     list-style-type: none;
     padding: 0px;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .wrapper {
@@ -71,7 +77,7 @@ nav ul {
 
     nav ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
 }
